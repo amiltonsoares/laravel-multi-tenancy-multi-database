@@ -17,8 +17,8 @@ class CreateCompaniesTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('domain')->unique();
-            $table->string('bd_database')->unique();
             $table->string('bd_hostname');
+            $table->string('bd_database')->unique();
             $table->string('bd_username');
             $table->string('bd_password');
             $table->timestamps();
