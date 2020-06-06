@@ -25,7 +25,7 @@ class CompanyController extends Controller
             'name' => 'Cliente ' . $index,
             'domain' => "cliente{$index}.multidabase.test",
             'bd_hostname' => 'mysql',
-            'bd_database' => 'curso_laravel_multi_database_' . $index,
+            'bd_database' => 'multi_database_' . $index,
             'bd_username' => 'root',
             'bd_password' => 'QaZ34237510',
         ]);
