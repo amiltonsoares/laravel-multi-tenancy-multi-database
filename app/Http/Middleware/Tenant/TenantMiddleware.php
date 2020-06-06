@@ -21,7 +21,7 @@ class TenantMiddleware
         $host = $request->getHost();
         $company = $this->getCompany($host);
 
-        if (!$company && $request->url() != route('404.tenant')) {
+        if (!$company && $request->url() != route('404.tenant') && !$manager->domainIsMain()) {
             return redirect()->route('404.tenant');
         } else if ($request->url() != route('404.tenant') && !$manager->domainIsMain()) {
             $manager->setConnection($company);
